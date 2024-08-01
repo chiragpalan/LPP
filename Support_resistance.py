@@ -42,6 +42,8 @@ for ticker in nifty_50_tickers:
         # Fetch the current market price (CMP)
         ticker_info = yf.Ticker(ticker)
         CMP = ticker_info.history(period="1d")['Close'].iloc[-1]
+
+        print(P, R1, S1, R2, S2, R3, S3,CMP)
         
         # Append the results to the DataFrame
         pivot_df = pivot_df.append({
