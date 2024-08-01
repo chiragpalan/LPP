@@ -11,10 +11,10 @@ x12 = LpVariable("x12", lowBound=0, upBound=1, cat='Continuous')
 
 # Define the objective function
 objective = lpSum([
-    8{,}006.664 * x1,
-    12{,}045 * x3,
-    16{,}160 * x6,
-    20{,}600 * x12
+    8006.664 * x1,
+    12045 * x3,
+    16160 * x6,
+    20600 * x12
 ])
 problem += objective
 
@@ -22,8 +22,8 @@ problem += objective
 budget_constraint = lpSum([
     500 * x1,
     750 * x3,
-    1{,}000 * x6,
-    1{,}250 * x12
+    1000 * x6,
+    1250 * x12
 ]) <= 500
 problem += budget_constraint
 
